@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_theme_dark_secondaryContainer"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="30dp"
+    android:theme="@style/Theme.AppCompat.NoActionBar">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txt_ingresoNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="155dp"
+        android:layout_marginEnd="30dp"
+        android:hint="@string/ingreseNombre"
+        android:textColorHint="@color/cardview_light_background"
+        app:boxBackgroundMode="outline"
+        app:hintTextColor="@color/md_theme_light_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txt_nombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/md_theme_light_background" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txt_ingresoCorreo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="30dp"
+        android:hint="@string/ingreseCorreo"
+        android:textColorHint="@color/cardview_light_background"
+        app:boxBackgroundMode="outline"
+        app:hintTextColor="@color/md_theme_light_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_ingresoNombre">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txt_correoElectronico"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/md_theme_light_background" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txt_principalPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="30dp"
+        android:hint="@string/contrase_a"
+        android:textColorHint="@color/cardview_light_background"
+        app:hintTextColor="@color/md_theme_light_background"
+        app:boxBackgroundMode="outline"
+        app:endIconMode="password_toggle"
+        app:endIconTint="@color/cardview_light_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_ingresoCorreo">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txt_passwordPrincipal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:textColor="@color/md_theme_light_background"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txt_secundarioPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="30dp"
+        android:hint="@string/verificarPassword"
+        android:textColorHint="@color/cardview_light_background"
+        app:boxBackgroundMode="outline"
+        app:endIconMode="password_toggle"
+        app:endIconTint="@color/cardview_light_background"
+        app:hintTextColor="@color/md_theme_light_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_ingresoCorreo">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txt_passwordVerificacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:textColor="@color/md_theme_light_background" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_registrar"
+        style="@style/Widget.Material3.Button.ElevatedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="125dp"
+        android:layout_marginEnd="125dp"
+        android:layout_marginBottom="24dp"
+        android:text="Registrar"
+        android:textColor="@color/md_theme_dark_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="132dp"
+        android:layout_height="121dp"
+        android:layout_marginStart="125dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="125dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_goneMarginRight="120dp"
+        app:srcCompat="@drawable/ic_user" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "190231446684",
+    "project_id": "fichahoras-87f2a",
+    "storage_bucket": "fichahoras-87f2a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:190231446684:android:5d17f9d0c25a7df7021959",
+        "android_client_info": {
+          "package_name": "com.luis.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjeLFGww7oDa5QBgBv2dl8msxGIIXul7M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

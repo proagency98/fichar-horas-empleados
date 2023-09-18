@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="usuario">Usuario</string>
+    <string name="contrase_a">Contraseña</string>
+    <string name="qu_deseas_hacer_hoy">¿Qué deseas hacer hoy?</string>
+    <string name="verificarPassword">Repite tu contraseña</string>
+    <string name="ingreseCorreo">Ingresa tu correo electronico</string>
+    <string name="ingreseNombre">Ingresa tu Nombre</string>
+
+</resources>
