@@ -24,48 +24,84 @@
         app:layout_constraintTop_toTopOf="parent">
 
 
+        <ImageView
+            android:id="@+id/imagenUser3"
+            android:layout_width="99dp"
+            android:layout_height="94dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:clickable="false"
+            android:onClick="openIconPicker"
+            android:src="@drawable/ic_user"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/txt_fechaActual3"
+            android:layout_width="144dp"
+            android:layout_height="17dp"
+            android:layout_marginStart="140dp"
+            android:layout_marginTop="-50dp"
+            android:layout_marginEnd="75dp"
+            android:background="@drawable/fondocuadrosbienvenida"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center"
+            android:text="Fecha Actual"
+            android:textColor="@color/md_theme_dark_background"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/txt_bienvenido3"
+            android:layout_width="207dp"
+            android:layout_height="17dp"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="-45dp"
+            android:layout_marginEnd="44dp"
+            android:text="Bienvenido + ${userName}"
+            android:background="@drawable/fondocuadrosbienvenida"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center"
+            android:textColor="@color/md_theme_dark_background"
+            android:textSize="10sp" />
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/txt_bienvenido2"
-        android:layout_width="207dp"
-        android:layout_height="17dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="20dp"
-        android:background="@drawable/fondocuadrosbienvenida"
-        android:fontFamily="sans-serif-condensed"
-        android:gravity="center"
-        android:text="Bienvenid@"
-        android:textColor="@color/md_theme_dark_background"
-        android:textSize="10sp"
+    <View
+        android:id="@+id/view2"
+        android:layout_width="395dp"
+        android:layout_height="307dp"
+        android:background="@drawable/fondo_botones_entrada_salida"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
 
-    <TextView
-        android:id="@+id/txt_fechaActual2"
-        android:layout_width="144dp"
-        android:layout_height="17dp"
-        android:layout_marginTop="70dp"
-        android:layout_marginEnd="50dp"
-        android:background="@drawable/fondocuadrosbienvenida"
-        android:fontFamily="sans-serif-condensed"
-        android:gravity="center"
-        android:text="Fecha Actual"
-        android:textColor="@color/md_theme_dark_background"
-        android:textSize="10sp"
+    </View>
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="36dp"
+        android:backgroundTint="#80FFFFFF"
+        android:text="Guardar"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imagenUser2"
-        android:layout_width="99dp"
-        android:layout_height="94dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="30dp"
-        android:clickable="true"
-        android:onClick="openIconPicker"
-        android:src="@drawable/ic_user"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ToggleButton
+        android:id="@+id/boton_toggle_on_off"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="204dp"
+        android:checked="true"
+        android:textOn="Entrar"
+        android:textOff="Salir"
+        android:text="Toggle"
+        app:layout_constraintBottom_toBottomOf="@+id/view2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
