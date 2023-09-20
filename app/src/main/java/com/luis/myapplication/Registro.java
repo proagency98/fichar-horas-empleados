@@ -5,12 +5,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.SetOptions;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -45,26 +49,31 @@ public class Registro extends AppCompatActivity {
                     return;
                 }
 
-                // Crear un nuevo usuario en Firestore
-                Map<String, Object> userData = new HashMap<>();
-                userData.put("nombre", name);
-                userData.put("correo", correo);
+                // Obtén el usuario actual de Firebase Authentication
+                FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
 
-                db.collection("Usuarios").document(correo)
-                        .set(userData, SetOptions.merge()) // Para fusionar datos si el documento ya existe
-                        .addOnCompleteListener(new OnCompleteListener<Void>() {
-                            @Override
-                            public void onComplete(@NonNull Task<Void> task) {
-                                if (task.isSuccessful()) {
-                                    // Datos guardados en Firestore con éxito
-                                    Toast.makeText(Registro.this, "Registro exitoso", Toast.LENGTH_LONG).show();
-                                    finish();
-                                } else {
-                                    // Error al guardar datos en Firestore
-                                    Toast.makeText(Registro.this, "Error al registrar: " + task.getException().getMessage(), Toast.LENGTH_LONG).show();
+                if (currentUser != null) {
+                    // El usuario está autenticado, podemos obtener su UID
+                    String userId = currentUser.getUid();
+
+                    // Crear un nuevo usuario en Firestore con el mismo ID de usuario
+                    Map<String, Object> userData = new HashMap<>();
+                    userData.put("nombre", name);
+                    userData.put("correo", correo);
+
+                    db.collection("Usuario").document(correo).set(userData)
+                            .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task) {
+                                    if (task.isSuccessful()) {
+                                        Toast.makeText(Registro.this, "Registro Exitoso", Toast.LENGTH_LONG).show();
+                                        finish();
+                                    } else {
+                                        Toast.makeText(Registro.this, "Error al registrarse", Toast.LENGTH_LONG).show();
+                                    }
                                 }
-                            }
-                        });
+                            });
+                }
             }
         });
     }
