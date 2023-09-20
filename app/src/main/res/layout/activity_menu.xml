@@ -7,16 +7,15 @@
     android:background="@color/md_theme_dark_secondaryContainer"
     android:gravity="center"
     android:orientation="vertical"
-    android:padding="30dp"
     android:theme="@style/Theme.AppCompat.NoActionBar">
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="333dp"
-        android:layout_height="149dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="30dp"
+        android:layout_width="367dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="13dp"
         android:background="@drawable/fondocuadro"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,45 +23,51 @@
         app:layout_constraintTop_toTopOf="parent">
 
 
+        <ImageView
+            android:id="@+id/imagenUser3"
+            android:layout_width="99dp"
+            android:layout_height="94dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:clickable="false"
+            android:onClick="openIconPicker"
+            android:src="@drawable/ic_user"
+            tools:ignore="SpeakableTextPresentCheck" />
 
+        <TextView
+            android:id="@+id/txt_fechaActual3"
+            android:layout_width="144dp"
+            android:layout_height="17dp"
+            android:layout_marginStart="140dp"
+            android:layout_marginTop="-50dp"
+            android:layout_marginEnd="75dp"
+            android:background="@drawable/fondocuadrosbienvenida"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center"
+            android:text="Fecha Actual"
+            android:textColor="@color/md_theme_dark_background"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/txt_bienvenido3"
+            android:layout_width="207dp"
+            android:layout_height="17dp"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="-45dp"
+            android:layout_marginEnd="44dp"
+            android:background="@drawable/fondocuadrosbienvenida"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center"
+            android:textColor="@color/md_theme_dark_background"
+            android:textSize="10sp" />
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/txt_bienvenido"
-        android:layout_width="207dp"
-        android:layout_height="17dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="20dp"
-        android:background="@drawable/fondocuadrosbienvenida"
-        android:fontFamily="sans-serif-condensed"
-        android:gravity="center"
-        android:text="Bienvenid@"
-        android:textColor="@color/md_theme_dark_background"
-        android:textSize="10sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/txt_fechaActual"
-        android:layout_width="144dp"
-        android:layout_height="17dp"
-        android:layout_marginTop="70dp"
-        android:layout_marginEnd="50dp"
-        android:background="@drawable/fondocuadrosbienvenida"
-        android:fontFamily="sans-serif-condensed"
-        android:gravity="center"
-        android:text="Fecha Actual"
-        android:textColor="@color/md_theme_dark_background"
-        android:textSize="10sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="333dp"
         android:layout_height="49dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="69dp"
         android:layout_marginEnd="30dp"
         android:background="@drawable/fondocuadro"
         android:fontFamily="sans-serif-condensed"
@@ -121,17 +126,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_horario" />
-
-    <ImageView
-        android:id="@+id/imagenUser"
-        android:layout_width="99dp"
-        android:layout_height="94dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="30dp"
-        android:src="@drawable/ic_user"
-        android:clickable="true"
-        android:onClick="openIconPicker"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
