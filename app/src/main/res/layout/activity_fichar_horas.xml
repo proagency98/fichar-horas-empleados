@@ -33,12 +33,12 @@
             android:clickable="false"
             android:onClick="openIconPicker"
             android:src="@drawable/ic_user"
-            tools:ignore="SpeakableTextPresentCheck" />
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck,UsingOnClickInXml" />
 
         <TextView
             android:id="@+id/txt_fechaActual3"
-            android:layout_width="144dp"
-            android:layout_height="17dp"
+            android:layout_width="145dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="140dp"
             android:layout_marginTop="-50dp"
             android:layout_marginEnd="75dp"
@@ -47,27 +47,29 @@
             android:gravity="center"
             android:text="Fecha Actual"
             android:textColor="@color/md_theme_dark_background"
-            android:textSize="10sp" />
+            android:textSize="15sp"
+            tools:ignore="HardcodedText,TextSizeCheck" />
 
         <TextView
             android:id="@+id/txt_bienvenido3"
-            android:layout_width="207dp"
-            android:layout_height="17dp"
+            android:layout_width="208dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="110dp"
             android:layout_marginTop="-45dp"
             android:layout_marginEnd="44dp"
-            android:text="Bienvenido + ${userName}"
             android:background="@drawable/fondocuadrosbienvenida"
             android:fontFamily="sans-serif-condensed"
             android:gravity="center"
+            android:text="Bienvenido"
             android:textColor="@color/md_theme_dark_background"
-            android:textSize="10sp" />
+            android:textSize="15sp"
+            tools:ignore="HardcodedText,TextSizeCheck" />
     </LinearLayout>
 
     <View
         android:id="@+id/view2"
-        android:layout_width="395dp"
-        android:layout_height="307dp"
+        android:layout_width="403dp"
+        android:layout_height="254dp"
         android:background="@drawable/fondo_botones_entrada_salida"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -76,32 +78,95 @@
 
     </View>
 
+
     <Button
         android:id="@+id/button6"
-        android:layout_width="300dp"
-        android:layout_height="100dp"
+        android:layout_width="293dp"
+        android:layout_height="81dp"
         android:layout_marginBottom="36dp"
-        android:backgroundTint="#80FFFFFF"
-        android:text="Guardar"
+        android:backgroundTint="#808E24AA"
+        android:text="@string/btn_guardar_FicharHorar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ToggleButton
         android:id="@+id/boton_toggle_on_off"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="204dp"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="152dp"
+        android:background="@drawable/fondocuadrosbienvenida"
         android:checked="true"
-        android:textOn="Entrar"
-        android:textOff="Salir"
-        android:text="Toggle"
+        android:textOff="@string/text_togglebutton_salir"
+        android:textOn="@string/btn_togglebutton_entrarysalir_ficharhoras"
         app:layout_constraintBottom_toBottomOf="@+id/view2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_horaActual"
+        android:layout_width="128dp"
+        android:layout_height="73dp"
+        android:background="@drawable/fondocuadrosbienvenida"
+        android:gravity="center_vertical"
+        android:text="@string/txt_horaActual_FicharHoras"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.116"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.356"
+        tools:ignore="RtlCompat" />
+
+    <TextView
+        android:id="@+id/txt_FechaActual"
+        android:layout_width="128dp"
+        android:layout_height="73dp"
+        android:background="@drawable/fondocuadrosbienvenida"
+        android:gravity="center_vertical"
+        android:text="Fecha Actual: "
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.886"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.356"
+        tools:ignore="RtlCompat" />
+
+    <TextView
+        android:id="@+id/txt_registro_salida"
+        android:layout_width="128dp"
+        android:layout_height="73dp"
+        android:background="@drawable/fondocuadrosbienvenida"
+        android:gravity="center_vertical"
+        android:text="Registro salida"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.886"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.537"
+        tools:ignore="RtlCompat" />
+
+    <TextView
+        android:id="@+id/txt_registro_entrada"
+        android:layout_width="128dp"
+        android:layout_height="73dp"
+        android:background="@drawable/fondocuadrosbienvenida"
+        android:gravity="center_vertical"
+        android:text="Registro entrada"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.116"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.536"
+        tools:ignore="RtlCompat" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
