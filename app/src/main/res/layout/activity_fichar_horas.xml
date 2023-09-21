@@ -36,7 +36,7 @@
             tools:ignore="ContentDescription,SpeakableTextPresentCheck,UsingOnClickInXml" />
 
         <TextView
-            android:id="@+id/txt_fechaActual3"
+            android:id="@+id/txt_fechaBienvenido"
             android:layout_width="145dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="140dp"
@@ -51,7 +51,7 @@
             tools:ignore="HardcodedText,TextSizeCheck" />
 
         <TextView
-            android:id="@+id/txt_bienvenido3"
+            android:id="@+id/txt_bienvenidoNombre"
             android:layout_width="208dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="110dp"
@@ -79,93 +79,53 @@
     </View>
 
 
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="293dp"
-        android:layout_height="81dp"
-        android:layout_marginBottom="36dp"
-        android:backgroundTint="#808E24AA"
-        android:text="@string/btn_guardar_FicharHorar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <ToggleButton
         android:id="@+id/boton_toggle_on_off"
-        android:layout_width="300dp"
-        android:layout_height="55dp"
-        android:layout_marginBottom="152dp"
+        android:layout_width="267dp"
+        android:layout_height="202dp"
+        android:layout_marginBottom="28dp"
         android:background="@drawable/fondocuadrosbienvenida"
         android:checked="true"
         android:textOff="@string/text_togglebutton_salir"
         android:textOn="@string/btn_togglebutton_entrarysalir_ficharhoras"
+        android:textSize="35dp"
         app:layout_constraintBottom_toBottomOf="@+id/view2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/txt_horaActual"
-        android:layout_width="128dp"
-        android:layout_height="73dp"
-        android:background="@drawable/fondocuadrosbienvenida"
-        android:gravity="center_vertical"
-        android:text="@string/txt_horaActual_FicharHoras"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.116"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.356"
-        tools:ignore="RtlCompat" />
-
-    <TextView
-        android:id="@+id/txt_FechaActual"
-        android:layout_width="128dp"
-        android:layout_height="73dp"
-        android:background="@drawable/fondocuadrosbienvenida"
-        android:gravity="center_vertical"
-        android:text="Fecha Actual: "
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.886"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.356"
-        tools:ignore="RtlCompat" />
-
-    <TextView
         android:id="@+id/txt_registro_salida"
-        android:layout_width="128dp"
-        android:layout_height="73dp"
+        android:layout_width="311dp"
+        android:layout_height="121dp"
         android:background="@drawable/fondocuadrosbienvenida"
         android:gravity="center_vertical"
-        android:text="Registro salida"
+        android:hint="Salida"
+        android:text=""
         android:textAlignment="center"
+        android:textSize="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.886"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.537"
+        app:layout_constraintVertical_bias="0.554"
         tools:ignore="RtlCompat" />
 
     <TextView
         android:id="@+id/txt_registro_entrada"
-        android:layout_width="128dp"
-        android:layout_height="73dp"
+        android:layout_width="311dp"
+        android:layout_height="121dp"
         android:background="@drawable/fondocuadrosbienvenida"
         android:gravity="center_vertical"
-        android:text="Registro entrada"
+        android:hint="Entrada"
+        android:text=""
+
         android:textAlignment="center"
+        android:textSize="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.116"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.536"
+        app:layout_constraintVertical_bias="0.312"
         tools:ignore="RtlCompat" />
 
 
