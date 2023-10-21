@@ -7,8 +7,11 @@
     <string name="ingreseCorreo">Ingresa tu correo electronico</string>
     <string name="ingreseNombre">Ingresa tu Nombre y Apellidos</string>
     <string name="btn_guardar_FicharHorar">Guardar</string>
-    <string name="btn_togglebutton_entrarysalir_ficharhoras">Entrar</string>
-    <string name="text_togglebutton_salir">Salir</string>
+    <string name="btn_togglebutton_entrarysalir_ficharhoras">Fichar</string>
+    <string name="text_togglebutton_salir">Fichar</string>
     <string name="txtView_fechaActual_FicharHoras">Fecha Acutal</string>
     <string name="txt_horaActual_FicharHoras">Hora Actual</string>
+    <string name="iniciar_sesi_n">Iniciar Sesión</string>
+    <string name="registrarse">Registrar</string>
+    <string name="valorCeldaEntradaHoras" />
 </resources>

@@ -4,32 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/md_theme_dark_secondaryContainer"
+    android:background="@drawable/background_all_app"
     android:gravity="center"
-    android:orientation="vertical"
-    android:padding="30dp"
-    android:theme="@style/Theme.AppCompat.NoActionBar">
+    android:orientation="vertical">
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/txt_ingresoCorreo"
         android:layout_width="310dp"
         android:layout_height="77dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="240dp"
         android:layout_marginEnd="30dp"
-        android:hint="@string/usuario"
+        android:layout_marginBottom="36dp"
         android:textColorHint="@color/cardview_light_background"
         app:boxBackgroundMode="outline"
         app:hintTextColor="@color/md_theme_light_background"
+        app:layout_constraintBottom_toTopOf="@+id/txt_principalPassword"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.478"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
         <EditText
             android:id="@+id/txt_correoElectronico"
             android:layout_width="match_parent"
             android:layout_height="64dp"
-            android:textColor="@color/md_theme_light_background"/>
+            android:hint="@string/usuario"
+            android:textColor="@color/md_theme_light_background"
+            tools:ignore="Autofill,SpeakableTextPresentCheck,TextFields" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -38,68 +40,76 @@
         android:layout_width="310dp"
         android:layout_height="78dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="40dp"
         android:layout_marginEnd="30dp"
-        android:hint="@string/contrase_a"
+        android:contentDescription="Ingresas aqui tu contraseña"
         android:textColorHint="@color/cardview_light_background"
         app:boxBackgroundMode="outline"
         app:endIconMode="password_toggle"
         app:endIconTint="@color/cardview_light_background"
         app:hintTextColor="@color/md_theme_light_background"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.478"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_ingresoCorreo">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.578"
+        tools:ignore="HardcodedText">
 
         <EditText
             android:id="@+id/txt_passwordPrincipal"
             android:layout_width="match_parent"
             android:layout_height="64dp"
+            android:hint="Contraseña"
             android:inputType="textPassword"
-            android:textColor="@color/md_theme_light_background" />
+            android:textColor="@color/md_theme_light_background"
+            tools:ignore="Autofill,SpeakableTextPresentCheck" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/btn_accionFormularioRegistro"
-        style="@style/Widget.Material3.Button.ElevatedButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="100dp"
-        android:text="Registrar"
+        android:id="@+id/btn_iniciar"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/botones_main"
+        android:text="@string/iniciar_sesi_n"
         android:textColor="@color/md_theme_dark_background"
-        android:textSize="14dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_accionFormularioRegistro"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_iniciar" />
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_principalPassword"
+        app:layout_constraintVertical_bias="0.941" />
 
     <Button
-        android:id="@+id/btn_iniciar"
-        style="@style/Widget.Material3.Button.ElevatedButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="49dp"
-        android:layout_marginBottom="100dp"
-        android:text="Iniciar Sesión"
+        android:id="@+id/btn_accionFormularioRegistro"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:background="@drawable/botones_main"
+        android:text="@string/registrarse"
         android:textColor="@color/md_theme_dark_background"
-        android:textSize="14dp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btn_accionFormularioRegistro"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.867" />
 
-    <ImageView
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/imageView"
-        android:layout_width="132dp"
-        android:layout_height="121dp"
-        android:layout_marginStart="125dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="125dp"
+        android:layout_width="193dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/principal"
+        app:layout_constraintBottom_toTopOf="@+id/txt_ingresoCorreo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_goneMarginRight="120dp"
-        app:srcCompat="@drawable/ic_user" />
+        app:layout_constraintVertical_bias="0.0">
+
+    </androidx.appcompat.widget.AppCompatImageView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
