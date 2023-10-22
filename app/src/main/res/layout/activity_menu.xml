@@ -55,6 +55,7 @@
             android:background="@drawable/fondostextview"
             android:fontFamily="sans-serif-condensed"
             android:gravity="center"
+            android:text=""
             android:textColor="@color/md_theme_dark_background"
             android:textSize="12sp" />
     </LinearLayout>
